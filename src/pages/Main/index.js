@@ -1,7 +1,24 @@
 import React from 'react';
 
-import { Title } from './styles';
+import { FaGithubAlt, FaPlus } from 'react-icons/fa';
+
+import { Container, Form, SubmitButton } from './styles';
 
 export default function Main() {
-  return <Title>Hello T-Rex Code</Title>;
+  return (
+    <Container>
+      <h1>
+        <FaGithubAlt />
+        Repositorios
+      </h1>
+
+      <Form onSubmit={() => {}}>
+        <input type="text" placeholder="Adicionar repositorios" />
+
+        <SubmitButton>
+          <FaPlus color="#FFF" size={14} />
+        </SubmitButton>
+      </Form>
+    </Container>
+  );
 }
